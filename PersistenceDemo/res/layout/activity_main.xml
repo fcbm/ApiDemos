@@ -1,0 +1,87 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scroller"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true" >
+<LinearLayout 
+    
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="NAMED GLOBAL PREFERENCES\nContext.getSharedPreferences(SP_FILE_NAME, Activity.MODE_PRIVATE)\nstored in:\ndata/data/[packname]/shared_prefs/SP_FILE_NAME.xml"/>
+    <TextView
+        android:id="@+id/tvCtxSharedPref" 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#CCCCCC"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="UNNAMED GLOBAL PREFERENCES - Set By PreferenceScreen\nPreferenceManager.getDefaultSharedPreferences(Context)\nstored in:\ndata/data/[packname]/shared_prefs/[packname]_[resXml].xml"/>
+    <TextView
+        android:id="@+id/tvPrefMgrSharedPref" 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#CCCCCC"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="UNNAMED Activity PREFERENCES\nActivity.getPreferences(Activity.MODE_PRIVATE)\nstored in:\ndata/data/[packname]/shared_prefs/[ActivityName].xml"/>
+    <RadioGroup
+        android:id="@+id/rgChoice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#CCCCCC"
+        android:orientation="horizontal"
+        >
+        <RadioButton
+            android:id="@+id/rbOne"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="One" 
+            />
+        <RadioButton
+            android:id="@+id/rbTwo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Two" 
+            />
+        <RadioButton
+            android:id="@+id/rbThree"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Three" 
+            />                
+    </RadioGroup>    
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="ReadOnly asset file opened by Resources.openRawResource(id)"/>
+    <TextView
+        android:id="@+id/tvRawFile" 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#CCCCCC"
+        />    
+</LinearLayout>
+</ScrollView>

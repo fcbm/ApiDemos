@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scroller"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true" >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+    
+    <TextView
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content"
+        android:text="Context.getFilesDir() output (no filename)"
+        />
+    <TextView
+        android:id="@+id/tvGetFilesDir" 
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content"
+        android:background="#CCCCCC"
+        />
+    
+    <TextView
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content"
+        android:text="Context.getFileStreamPath(fname) output (filename appended)"
+        />
+    <TextView
+        android:id="@+id/tvGetFileStreamPath" 
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content"
+        android:background="#CCCCCC"
+        />
+       
+    <TextView
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content"
+        android:text="Private APP File List stored in : /data/data/[packname]/files/"
+        />
+    <TextView
+        android:id="@+id/tvFileList" 
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content"
+        android:background="#CCCCCC"
+        />
+
+    <TextView
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content"
+        android:text="Context.getDir(name, mode) Retrieve, creating if needed, a new directory in which the application can place its own custom data files:"
+        />
+    <TextView
+        android:id="@+id/tvInternalPath"
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content"
+        android:background="#CCCCCC"
+        />    
+    
+    <TextView
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content"
+        android:text="Context.getExternalFielsDir(String type) retrieves the External Private Path\nEnvironment.getExternalStoragePublicDirectory(String type) retrieves the External Public Path"
+        />
+    <TextView
+        android:id="@+id/tvExternalPath"
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content"
+        android:background="#CCCCCC"
+        />
+     
+    <TextView
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content"
+        android:text="Environment.getExternalStorageDirectory() retrieves the External Path (pre API 8) :"
+        />
+    <TextView
+        android:id="@+id/tvOldExternalPath"
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content"
+        android:background="#CCCCCC"
+        />
+    
+    <TextView
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content"
+        android:text="Content of a private file: wrote openFileOutput / read openFileInput"
+        />
+    <TextView
+        android:id="@+id/tvPrivateFileReadWrite"
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content"
+        android:background="#CCCCCC"
+        />        
+    <Button
+        android:id="@+id/btnDeletePrivateFile"
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content"
+        android:text="Remove Internal File" />
+    
+    <TextView
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content"
+        android:text="Content of a private file in nested dir: can't use openFileInput/Output, but new File(getDir(nested_dir), INTERNAL_FNAME_IN_SUBDIR) and BufferedWriter to append"
+        />
+    <TextView
+        android:id="@+id/tvPrivateNestedFileReadWrite"
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content"
+        android:background="#CCCCCC"
+        />        
+    <Button
+        android:id="@+id/btnDeletePrivateNestedFile"
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content"
+        android:text="Remove Internal Nested File" />    
+
+    <TextView
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content"
+        android:text="Cache Paths getCacheDir() / getExternalCacheDir()"
+        />
+    <TextView
+        android:id="@+id/tvCachePaths" 
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content"
+        android:background="#CCCCCC"
+        />    
+    
+</LinearLayout>
+</ScrollView>

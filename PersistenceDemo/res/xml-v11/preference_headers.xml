@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<preference-headers xmlns:android="http://schemas.android.com/apk/res/android" >
+    <header
+        android:fragment="com.example.persistencedemo.MyPreferenceFragment"
+        android:icon="@android:drawable/arrow_up_float"
+        android:title="My Preference Fragment"
+        android:summary="This is the description"
+        />
+    <header
+        android:fragment="com.example.persistencedemo.MyDisplayPreferenceFragment"
+        android:icon="@android:drawable/arrow_down_float"
+        android:title="My Display Preference Fragment"
+        android:summary="This is another description"
+        />
+    <header
+        android:icon="@android:drawable/edit_text"
+        android:title="Intent Preference Sound"
+        android:summary="This is yet another description"
+        >
+                                
+        <intent android:action="android.settings.SOUND_SETTINGS"/>
+    </header>   
+    <header
+        android:icon="@android:drawable/alert_dark_frame"
+        android:title="Intent Preference Display"
+        android:summary="This is yet yet another description"
+        >
+                                
+        <intent android:action="android.settings.DISPLAY_SETTINGS"/>
+    </header>        
+</preference-headers>

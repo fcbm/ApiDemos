@@ -1,0 +1,75 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/mainLayout"
+    android:orientation="vertical"
+    android:layoutAnimation="@anim/popin_layout_animation"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        >
+    <LinearLayout 
+    	android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="vertical"
+    	>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hello_world" />
+    
+    <ImageView
+        android:id="@+id/ivFrameByFrameHost"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        
+        android:contentDescription="@string/app_name"
+        />
+    
+    <Button
+        android:id="@+id/btnTweenedViewAnimated"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:text="Tweened View Animation"
+        />
+    
+    <Button
+        android:id="@+id/btnTweenedViewRotate" 
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+		android:text="Tweened View Animation - Rotate"
+        />  
+            
+    <Button
+        android:id="@+id/btnLayoutAnimation1" 
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+		android:text="Layout Animation"
+        />
+    
+    <Button
+        android:id="@+id/btnPropertyAnimationXML" 
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+		android:text="Property Animation XML"
+        />    
+
+    <Button
+        android:id="@+id/btnPropertyAnimationCODE" 
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+		android:text="Property Animation CODE"
+        />       
+    <Button
+        android:id="@+id/btnPropertyAnimationSet" 
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+		android:text="Property Animation Set"
+		
+        />   
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>

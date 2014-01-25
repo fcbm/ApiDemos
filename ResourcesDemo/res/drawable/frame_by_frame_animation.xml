@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 
+	The following frame by frame animation must be assigned to a host View as background
+	This is the definition of an AnimationDrawable in XML  
+-->
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:oneshot="false"
+    >
+    
+    <item 
+        android:drawable="@drawable/ilfattoquotidiano"  
+        android:duration="500"/>
+    <item 
+        android:drawable="@drawable/repubblica"  
+        android:duration="500"/>
+    <item 
+        android:drawable="@drawable/link2universe"
+        android:duration="500"/>
+    <item 
+        android:drawable="@drawable/slashdot"
+        android:duration="500"/>
+    
+</animation-list>

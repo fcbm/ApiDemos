@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    <PreferenceCategory
+        android:title="My Preference Category One"
+        android:icon="@drawable/ic_launcher" 
+        >
+        <CheckBoxPreference
+            android:key="PREF_CHECK_BOX"
+            android:title="Check Box Preference"
+            android:summary="This is a description"
+            android:defaultValue="true" 
+            />
+        <CheckBoxPreference
+            android:key="PREF_VERBOSE_CHECK_BOX"
+            android:title="Check Box Preference"
+            android:summary="This is a description"
+            android:defaultValue="true"
+            android:summaryOn="Check is ON" 
+            android:summaryOff="Check is OFF"
+            />
+        
+        <EditTextPreference
+            android:key="PREF_EDIT_TEXT"
+            android:title="Edit Text Preference"
+            android:summary="This is a description"
+            android:dialogTitle="Dialog Title"
+            android:dialogMessage="Dialog Message"
+            android:dialogIcon="@drawable/ic_launcher"
+            android:icon="@drawable/ic_launcher"
+            android:defaultValue="Default Text"
+             />
+        
+    </PreferenceCategory>
+ 
+    <PreferenceCategory
+        android:title="My Preference Category Two"
+        android:icon="@drawable/ic_launcher" 
+        >
+ 
+        <ListPreference
+            android:key="PREF_EVEN_LIST_TEXT"
+            android:title="Even List Title"
+            android:summary="Preference Even List Description"
+            android:entries="@array/arrayOfEvenInts"
+            android:entryValues="@array/arrayOfEvenStrings"  
+            />
+        <ListPreference
+            android:key="PREF_ODD_LIST_TEXT"
+            android:title="Odd List Title"
+            android:summary="Preference Odd List Description"
+            android:entries="@array/arrayOfOddStrings"
+            android:entryValues="@array/arrayOfOddInts" 
+            />
+        <ListPreference
+            android:key="PREF_NO_VAL_LIST_TEXT"
+            android:title="No Values List Title"
+            android:icon="@drawable/ic_launcher"
+            android:summary="Preference List Description"
+            android:entries="@array/arrayOfOddStrings"
+            />
+        
+    </PreferenceCategory>
+     
+    <PreferenceCategory
+        android:title="My Preference Category Three"
+        android:icon="@drawable/ic_launcher" 
+        android:key="PREF_CAT3"
+        >
+        <MultiSelectListPreference
+            android:key="PREF_MULTI_SEL_LIST"
+            android:title="MultiSelectList"
+            android:summary="This is a summary"
+            android:entries="@array/arrayOfEvenStrings"
+            android:entryValues="@array/arrayOfEvenInts" 
+            />
+        <SwitchPreference
+            android:key="PREF_SWITCH"
+            android:summaryOn="Summary ON"
+            android:summaryOff="Summary OFF"
+            android:switchTextOn="Text ON"
+            android:switchTextOff="Text OFF"
+            android:title="TITLE"
+            android:icon="@drawable/ic_launcher"/>
+    </PreferenceCategory>    
+    
+    <PreferenceCategory
+        android:title="My Preference Category Four"
+        android:icon="@drawable/ic_launcher" 
+        android:key="PREF_CAT4"
+        android:selectable="false"
+        android:enabled="false"
+        >
+        <MultiSelectListPreference
+            android:key="PREF_MULTI_SEL_LIST1"
+            android:title="MultiSelectList"
+            android:summary="This is a summary"
+            android:entries="@array/arrayOfEvenStrings"
+            android:entryValues="@array/arrayOfEvenInts" 
+			            
+            />
+        
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="My Preference Category Five"
+        android:icon="@drawable/ic_launcher" >
+    
+   	 <intent android:action="android.settings.DISPLAY_SETTINGS"/>
+    </PreferenceCategory>
+</PreferenceScreen>
